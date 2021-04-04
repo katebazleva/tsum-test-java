@@ -15,7 +15,7 @@ public class WhenRegistering extends BaseTest {
     public void shouldSeeAgreementText() {
         user.openRegisterPage();
         user.shouldSeeAgreementText();
-        user.shouldHaveCorrectTermsLink();
+        user.shouldSeeCorrectTermsLink();
     }
 
     @Test

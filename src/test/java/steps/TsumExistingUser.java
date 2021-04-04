@@ -1,13 +1,13 @@
 package steps;
 
 import net.thucydides.core.annotations.Step;
-import ui.TsumBasePage;
+import ui.TsumHeaderBlock;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class TsumExistingUser extends BaseUser {
 
-    private TsumBasePage page;
+    private TsumHeaderBlock page;
 
     private String email = "katebazleva@gmail.com";
     private String password = "qwerty123";

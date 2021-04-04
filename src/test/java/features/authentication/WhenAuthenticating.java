@@ -15,7 +15,7 @@ public class WhenAuthenticating extends BaseTest {
     public void shouldSeeLinkToRestorePassword() {
         user.openLoginPage();
         user.shouldSeeForgetPasswordLink();
-        user.shouldHaveCorrectForgetPasswordLink();
+        user.shouldSeeCorrectForgetPasswordLink();
     }
 
     @Test

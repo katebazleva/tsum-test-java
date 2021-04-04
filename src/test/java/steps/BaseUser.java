@@ -47,7 +47,7 @@ public class BaseUser {
     }
 
     @Step
-    public void shouldHaveCorrectTermsLink() {
+    public void shouldSeeCorrectTermsLink() {
         assertThat(tsumRegisterPage.getAgreementTermsLink()).isEqualTo("https://www.tsum.ru/terms/");
     }
 
@@ -57,7 +57,7 @@ public class BaseUser {
     }
 
     @Step
-    public void shouldHaveCorrectForgetPasswordLink() {
+    public void shouldSeeCorrectForgetPasswordLink() {
         assertThat(tsumLoginPage.getForgetLink()).isEqualTo("https://www.tsum.ru/password/forgot/");
     }
 }
