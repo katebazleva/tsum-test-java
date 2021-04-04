@@ -39,6 +39,7 @@ dependencies {
             "net.serenity-bdd:serenity-screenplay:${serenityCoreVersion}",
             "junit:junit:${junitVersion}",
             "org.assertj:assertj-core:${assertJVersion}"
+    implementation 'com.github.javafaker:javafaker:1.0.2'
 }
 
 test {

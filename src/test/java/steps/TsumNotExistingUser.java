@@ -1,27 +1,29 @@
 package steps;
 
+import com.github.javafaker.Faker;
 import net.thucydides.core.annotations.Step;
-import ui.LandingPage;
-import ui.TsumLoginPage;
 
-import static org.assertj.core.api.Assertions.assertThat;
-
-public class TsumNotExistingUser {
-    private TsumLoginPage tsumLoginPage;
-    private LandingPage landingPage;
+public class TsumNotExistingUser extends BaseUser {
 
     @Step
-    public void isOnTheHomePage() {
-        tsumLoginPage.open();
+    public void logins() {
+        String email = "test@test.ru";
+        String password = "test";
+        super.logins(email, password);
     }
 
     @Step
-    public void logsInAsAdmin() {
-        tsumLoginPage.login();
+    public void register() {
+        Faker faker = new Faker();
+        String email = faker.internet().emailAddress();
+        String password = "qwerty123";
+        super.registers(email, password);
     }
 
     @Step
-    public void shouldBeOnLandingPage() {
-        assertThat(landingPage.noticeMessage()).isEqualTo("You are now logged in as admin@decohere.com.");
+    public void registerWithBadPassword() {
+        String email = "test@test.ru";
+        String password = "test";
+        super.registers(email, password);
     }
 }
